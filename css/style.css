@@ -1,0 +1,87 @@
+/* Begin reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Edn reset */
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.pagina-iniziale {
+  width: 50%;
+  height: 50vh;
+  margin: auto;
+}
+
+
+/* Begin Contente BCLOCK*/
+.contenuti {
+  width: 100%;
+  height: 40vw;
+  cursor: pointer;
+  margin: 20px auto;
+  overflow: hidden; /* image zoom doesn't affect container */
+}
+
+.citta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 3px 3px 2px #222;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease; /* smooth transition */
+}
+
+/* Background Image */
+.Roma {
+  background-image: url('../img/roma.jpg');
+}
+
+.citta:hover  {
+  transform: scale(1.1); /* actual 10% zoom */
+}
+
+.Milano {
+  background-image: url('../img/milano.jpg');
+}
+
+.Napoli {
+  background-image: url('../img/napoli.jpg');
+}
+/* EDN Background Image */
+
+.citta > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+    transition: all 0.4s ease; /* smooth transition */
+}
+
+.citta:hover > .overlay {
+  background-color: rgba(0, 0, 0, .0); /* overlay gone on hover */
+}
+
+.citta h2 {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 1px #222;
+  transition: all 0.2s;
+}
+
+.citta:hover h2 {
+ font-size: 3.1rem;
+}
+/* END Content BLOCK */
